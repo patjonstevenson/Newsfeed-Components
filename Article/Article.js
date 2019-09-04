@@ -3,7 +3,7 @@
 const data = [
   {
     title: 'Lambda School Students: "We\'re the best!"',
-    date: 'Nov 5th, 2018',
+    date: "Nov 5th, 2018",
     firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
         moff wicket tatooine luke.Solo wampa wampa calrissian yoda moff.Darth grievous darth gonk darth hutt.Darth baba skywalker
         watto fett jango maul han.Mon ewok sidious sidious lando kenobi grievous gamorrean solo.Yoda wedge utapau darth calamari.
@@ -23,8 +23,8 @@ const data = [
         moff calamari mon obi-wan. Solo grievous lando coruscant. Jinn darth palpatine obi-wan mon.`
   },
   {
-    title: 'Javascript and You, ES6',
-    date: 'May 7th, 2019',
+    title: "Javascript and You, ES6",
+    date: "May 7th, 2019",
     firstParagraph: `Alohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost
         Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot
         snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods
@@ -43,8 +43,8 @@ const data = [
         sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.`
   },
   {
-    title: 'React vs Angular vs Vue',
-    date: 'June 7th, 2019',
+    title: "React vs Angular vs Vue",
+    date: "June 7th, 2019",
     firstParagraph: `Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charmander Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Charmeleon Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charizard Lorem ipsum dolor sit amet,
@@ -71,8 +71,8 @@ const data = [
         Castform Lotad the power that's inside Burnt Berry Makuhita. Ghost Ariados Corphish Dusclops Golbat Gligar Zweilous.`
   },
   {
-    title: 'Professional Software Development in 2019',
-    date: 'Jan 1st, 2019',
+    title: "Professional Software Development in 2019",
+    date: "Jan 1st, 2019",
     firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
           hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
           Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
@@ -85,6 +85,14 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  // Add article to array
+  {
+    title: "Sanctum Ipsum",
+    date: "Sept 4th, 2019",
+    firstParagraph: `Padre Pio Lourdes magisterium vicar of Christ St. Francis of Assisi Our Lady of Guadalupe Holy days of obligation Padre Pio eucharist annointing of the sick communion St. Therese of Lisieux. Vicar of Christ Pope St. John Paul II monk St. Thomas Aquinas nun eucharist Fatima St. Joseph St. James salve regina catechesis. Confiteor St. Michael the Archangel defend us in battle cathedral St. Thomas Aquinas Padre Pio holy Mary, Mother of God St. Michael the Archangel defend us in battle Trappist canonization Paschal mystery vatican St. Rose of Lima assumption salve regina eucharist. Communion transubstantiation vicar of Christ relic monastery St. James adoration vatican St. Michael the Archangel defend us in battle universal College of Cardinals Papal enclave St. Joseph ecumenical council. Lourdes confession St. Francis of Assisi saint medal encyclical litany confiteor St. Michael the Archangel defend us in battle relic transubstantiation bless us, oh lord, and these thy gifts Holy days of obligation St. Michael the Archangel defend us in battle St. Michael the Archangel defend us in battle priest.`,
+    secondParagraph: `Tradition catechesis abbot Benedictine vatican Our Lady of Guadalupe miter Pope Francis saint catechesis rosary. Universal apostolic succession Nicene creed catholic nun beatified St. Therese of Lisieux consecration saint medal ecumenical council. Nun Kyrie eleison Apostles creed encyclical monsignor St. Gabriel College of Cardinals assumption Cistercian diocese Thomas Merton. Christe eleison tradition Holy days of obligation the sacred heart of Jesus rosary monsignor tradition Pope St. John Paul II St. Gabriel monsignor liturgy of the hours diocese beatified monastery Padre Pio. Salve regina Papal enclave Trappist salve regina adoration salve regina consecration litany College of Cardinals rosary adoration miter.`,
+    thirdParagraph: `Monk saint medal Holy days of obligation Paschal mystery eucharist Papal enclave Lourdes diocese deacon Trappist salve regina Nicene creed. Confession St. Gabriel Paschal mystery our Father, who art in Heaven apostolic succession annointing of the sick stations of the cross miter liturgy of the hours magisterium canonization the sacred heart of Jesus St. Francis of Assisi St. Joseph transubstantiation. Apostolic succession litany dogma consecration pontificate St. Therese of Lisieux Thomas Merton relic St. Gabriel confiteor. Apostles creed annointing of the sick cathedral adoration diocese assumption forgive me Father, for I have sinned communion encyclical annunciation St. Therese of Lisieux Benedictine. Litany Christe eleison rosary Christe eleison holy Mary, Mother of God rosary miter Padre Pio universal relic.`
   }
 ];
 
@@ -112,3 +120,46 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+// Create component function
+function createArticle(props) {
+  // Create Elements
+  const article = document.createElement("div");
+  const title = document.createElement("h2");
+  const date = document.createElement("p");
+  const firstParagraph = document.createElement("p");
+  const secondParagraph = document.createElement("p");
+  const thirdParagraph = document.createElement("p");
+  const button = document.createElement("span");
+
+  // Populate elements with content
+  title.textContent = props.title;
+  date.textContent = props.date;
+  firstParagraph.textContent = props.firstParagraph;
+  secondParagraph.textContent = props.secondParagraph;
+  thirdParagraph.textContent = props.thirdParagraph;
+
+  // Add classes to elements
+  article.classList.add("article");
+  date.classList.add("date");
+  button.classList.add("expandButton");
+
+  // Add event listener to button
+  button.addEventListener("click", event => {
+    article.classList.toggle("article-open");
+  });
+
+  // Append children to article
+  article.appendChild(title);
+  article.appendChild(date);
+  article.appendChild(firstParagraph);
+  article.appendChild(secondParagraph);
+  article.appendChild(thirdParagraph);
+  article.appendChild(button);
+
+  return article;
+}
+
+// Create components from data
+const articles = document.querySelector(".articles");
+data.forEach(article => articles.appendChild(createArticle(article)));
