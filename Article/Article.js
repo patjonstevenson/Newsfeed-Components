@@ -127,6 +127,7 @@ function createArticle(props) {
   const article = document.createElement("div");
   const title = document.createElement("h2");
   const date = document.createElement("p");
+  const articleContent = document.createElement("div");
   const firstParagraph = document.createElement("p");
   const secondParagraph = document.createElement("p");
   const thirdParagraph = document.createElement("p");
@@ -148,6 +149,12 @@ function createArticle(props) {
   date.classList.add("date");
   buttons.classList.add("expandButton");
   closeButton.classList.add("hide-btn");
+  articleContent.classList.add("article-content-closed");
+
+  // Add paragraphs to articleContent
+  articleContent.appendChild(firstParagraph);
+  articleContent.appendChild(secondParagraph);
+  articleContent.appendChild(thirdParagraph);
 
   // Add buttons to buttons
   buttons.appendChild(expandButton);
@@ -158,14 +165,14 @@ function createArticle(props) {
     article.classList.toggle("article-open");
     expandButton.classList.toggle("hide-btn");
     closeButton.classList.toggle("hide-btn");
+    articleContent.classList.toggle("article-content-open");
+    articleContent.classList.toggle("article-content-closed");
   });
 
   // Append children to article
   article.appendChild(title);
   article.appendChild(date);
-  article.appendChild(firstParagraph);
-  article.appendChild(secondParagraph);
-  article.appendChild(thirdParagraph);
+  article.appendChild(articleContent);
   article.appendChild(buttons);
 
   return article;
