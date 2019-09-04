@@ -69,10 +69,10 @@
   bottom: 0;
   width: 2.5%;
   left: 100%;
-  font-size: 15px;
+  font-size: 20px;
   color: #388e3c;
   cursor: pointer;
-  transform: translate(-50%);
+  transform: translate(-25%);
   background-color: transparent;
   text-align: right;
 }
