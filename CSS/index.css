@@ -75,6 +75,7 @@
 }
 .article-open {
   height: 400px;
+  overflow: scroll;
 }
 .menu-button {
   position: absolute;

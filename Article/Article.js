@@ -138,6 +138,7 @@ function createArticle(props) {
   firstParagraph.textContent = props.firstParagraph;
   secondParagraph.textContent = props.secondParagraph;
   thirdParagraph.textContent = props.thirdParagraph;
+  button.textContent = "\u25BC";
 
   // Add classes to elements
   article.classList.add("article");
@@ -146,6 +147,7 @@ function createArticle(props) {
 
   // Add event listener to button
   button.addEventListener("click", event => {
+    //document.querySelector(".articles").classList.toggle("article-open");
     article.classList.toggle("article-open");
   });
 
