@@ -53,15 +53,20 @@ function createMenu(items) {
   // Add menuItems to menu
   menu.appendChild(menuItems);
 
-  // Menu Button
-  const menuButton = document.querySelector(".menu-button");
-
-  // Add event listener to menu button
-  menu.classList.toggle("menu--open");
-  menuButton.addEventListener("click", event => {});
-
   return menu;
 }
 
+// Create menu
+const menu = createMenu(menuItems);
+
+// Menu Button
+const menuButton = document.querySelector(".menu-button");
+
+// Add event listener to menu button
+menuButton.addEventListener("click", event => {
+  menu.classList.toggle("menu--open");
+});
+
+// Add menu to DOM
 const header = document.querySelector(".header");
-header.appendChild(createMenu(menuItems));
+header.appendChild(menu);
