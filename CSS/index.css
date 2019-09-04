@@ -73,6 +73,9 @@
   transform: translate(-50%);
   background-color: white;
 }
+.article .hide-btn {
+  display: none;
+}
 .article-open {
   height: 400px;
   overflow: scroll;

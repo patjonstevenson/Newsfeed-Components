@@ -130,7 +130,9 @@ function createArticle(props) {
   const firstParagraph = document.createElement("p");
   const secondParagraph = document.createElement("p");
   const thirdParagraph = document.createElement("p");
-  const button = document.createElement("span");
+  const buttons = document.createElement("div");
+  const expandButton = document.createElement("span");
+  const closeButton = document.createElement("span");
 
   // Populate elements with content
   title.textContent = props.title;
@@ -138,17 +140,24 @@ function createArticle(props) {
   firstParagraph.textContent = props.firstParagraph;
   secondParagraph.textContent = props.secondParagraph;
   thirdParagraph.textContent = props.thirdParagraph;
-  button.textContent = "\u25BC";
+  expandButton.textContent = "\u25BC";
+  closeButton.textContent = "\u25b2";
 
   // Add classes to elements
   article.classList.add("article");
   date.classList.add("date");
-  button.classList.add("expandButton");
+  buttons.classList.add("expandButton");
+  closeButton.classList.add("hide-btn");
+
+  // Add buttons to buttons
+  buttons.appendChild(expandButton);
+  buttons.appendChild(closeButton);
 
   // Add event listener to button
-  button.addEventListener("click", event => {
-    //document.querySelector(".articles").classList.toggle("article-open");
+  buttons.addEventListener("click", event => {
     article.classList.toggle("article-open");
+    expandButton.classList.toggle("hide-btn");
+    closeButton.classList.toggle("hide-btn");
   });
 
   // Append children to article
@@ -157,7 +166,7 @@ function createArticle(props) {
   article.appendChild(firstParagraph);
   article.appendChild(secondParagraph);
   article.appendChild(thirdParagraph);
-  article.appendChild(button);
+  article.appendChild(buttons);
 
   return article;
 }
